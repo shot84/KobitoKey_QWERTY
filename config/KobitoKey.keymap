@@ -38,20 +38,39 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W     &kp E                &kp R        &kp T             &kp Y     &kp U        &kp I      &kp O      &kp P
-&kp A             &kp S     &kp D                &kp F        &kp G             &kp H     &kp J        &kp K      &kp L      &kp MINUS
-&mt LEFT_SHIFT Z  &kp X     &kp C                &kp V        &kp B             &kp N     &kp M        &kp COMMA  &kp DOT    &kp APOS
-&kp LCTRL         &kp LALT  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &lt 3 LANGUAGE_1  &kp BSPC  &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
+&kp Q             &kp W     &kp E                &kp R        &kp T             &kp Y     &kp U        &kp I         &kp O          &kp P
+&kp A             &kp S     &kp D                &kp F        &kp G             &kp H     &kp J        &kp K         &kp L          &kp MINUS
+&mt LEFT_SHIFT Z  &kp X     &kp C                &kp V        &kp B             &kp N     &kp M        &mkp MB1      &mkp MB2       &kp PERIOD
+&kp LCTRL         &kp LALT  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &lt 3 LANGUAGE_1  &kp BSPC  &lt 1 ENTER  &lt 4 RSHIFT  &kp LG(SPACE)  &kp COMMA
             >;
         };
 
         layer1 {
             label = "NUMBER";
             bindings = <
-&kp N0     &kp N1  &kp N2  &kp N3     &trans  &kp MINUS  &trans     &kp UP    &trans     &trans
-&kp EQUAL  &kp N4  &kp N5  &kp N6     &trans  &kp PLUS   &kp LEFT   &kp DOWN  &kp RIGHT  &trans
-&trans     &kp N7  &kp N8  &kp N9     &trans  &kp ASTRK  &kp SLASH  &kp LBKT  &kp RBKT   &trans
-&trans     &trans  &trans  &kp LSHFT  &trans  &trans     &trans     &trans    &trans     &trans
+&kp TAB           &kp N7        &kp N8        &kp N9         &kp MINUS      &kp LC(LEFT)           &kp LC(RIGHT)  &kp LC(UP)    &kp LC(DOWN)  &kp LC(LS(LG(Z)))
+&kp N0            &kp N4        &kp N5        &kp N6         &kp COLON      &kp LG(RIGHT_BRACKET)  &kp AT_SIGN    &kp UP_ARROW  &kp EQUAL     &trans
+&mt LSHIFT SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &trans         &kp LG(LEFT_BRACKET)   &kp LEFT       &kp DOWN      &kp RIGHT     &trans
+&trans            &trans        &trans        &kp LG(LC(R))  &kp LC(LS(S))  &trans                 &trans         &trans        &trans        &trans
+            >;
+        };
+
+        layer3 {
+            label = "MOUSE";
+            bindings = <
+&kp ESCAPE       &kp LG(F2)         &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))     &kp PIPE               &kp LC(LA(D))     &kp LA(LC(E))      &kp LA(LC(F))  &kp LC(LA(T))     &kp LA(LC(G))
+&kp TAB          &kp DOUBLE_QUOTES  &kp AMPERSAND     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT        &kp LS(LG(DOWN))  &kp LA(LC(ENTER))
+&mt LSHIFT HASH  &kp PLUS           &kp EXCLAMATION   &kp QUESTION          &kp TILDE              &kp LG(A)         &kp LG(C)          &kp LG(V)      &kp LC(Q)         &kp LG(PLUS)
+&kp LCTRL        &trans             &kp EQUAL         &trans                &trans                 &kp DELETE        &trans             &kp LA(LG(V))  &kp LG(LS(V))     &kp LG(MINUS)
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &kp F2  &kp LC(LA(LEFT))  &kp LC(LA(RIGHT))  &kp F4         &kp F1            &kp F10            &trans         &trans                &trans
+&trans  &trans  &trans            &trans             &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT        &trans                &trans
+&trans  &trans  &trans            &trans             &trans         &kp LESS_THAN     &kp GREATER_THAN   &kp LS(LG(D))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))
+&trans  &trans  &trans            &trans             &trans         &trans            &trans             &trans         &trans                &trans
             >;
         };
 
@@ -65,13 +84,12 @@
             >;
         };
 
-        layer3 {
-            label = "MOUSE";
+        layer_5 {
             bindings = <
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
+&trans  &trans  &trans  &kp LG(LA(MINUS))  &kp LG(LA(LS(EQUAL)))  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LS(F4)         &kp LA(LS(S))          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
