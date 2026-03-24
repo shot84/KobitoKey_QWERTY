@@ -33,6 +33,16 @@
         };
     };
 
+    behaviors {
+        z_shft: zmk,behavior-hold-tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -40,7 +50,7 @@
             bindings = <
 &kp Q             &kp W     &kp E                &kp R        &kp T             &kp Y     &kp U        &kp I         &kp O          &kp P
 &kp A             &kp S     &kp D                &kp F        &kp G             &kp H     &kp J        &kp K         &kp L          &kp MINUS
-&mt LEFT_SHIFT Z  &kp X     &kp C                &kp V        &kp B             &kp N     &kp M        &mkp MB1      &mkp MB2       &kp PERIOD
+&z_shft LSHIFT Z  &kp X     &kp C                &kp V        &kp B             &kp N     &kp M        &mkp MB1      &mkp MB2       &kp PERIOD
 &kp LCTRL         &kp LALT  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &lt 3 LANGUAGE_1  &kp BSPC  &lt 1 ENTER  &lt 4 RSHIFT  &kp LG(SPACE)  &kp COMMA
             >;
         };
