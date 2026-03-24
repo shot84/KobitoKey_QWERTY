@@ -96,7 +96,7 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &kp LG(LA(MINUS))  &kp LG(LA(LS(EQUAL)))  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp LG(LA(MINUS))  &kp LG(LA(LS(EQUAL)))  &trans  &trans  &mkp MB1  &mkp MB2  &trans
 &trans  &trans  &trans  &kp LS(F4)         &kp LA(LS(S))          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans             &trans                 &trans  &trans  &trans  &trans  &trans
